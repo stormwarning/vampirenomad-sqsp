@@ -1,0 +1,5 @@
+    <!--CONTENT INJECTION POINT-->
+
+    <section id="content">    
+     {squarespace.main-content}
+    </section>
