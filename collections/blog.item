@@ -3,25 +3,32 @@
 
   <!--WRAPPER-->
   
-  <article id="post-{id}" class="{@|item-classes}">
-  
-    {.main-image?}  
-      <a href="{fullUrl}" class="main-image content-fill">
-        <img {@|image-meta} />
-      </a>
-    {.end}
+  <article id="post-{id}" class="post-article  {@|item-classes}">
+    <section class="post-content">
+      <header class="post-header">  
+        <div class="post-featured-image">  
+        {.main-image?}  
+          <a href="{fullUrl}" class="main-image content-fill">
+            <img {@|image-meta} />
+          </a>
+        {.end}
+        </div>
     
-    <!--POST TILE-->
-
-    <h1 class="title">
-      {.passthrough?}
-        <a href="{sourceUrl}">{title}</a>
-      {.or}
-        <a href="{fullUrl}">{title}</a>
-      {.end}
-    </h1>
+        <!--POST TILE-->
+    
+        <h1 class="title">
+          {.passthrough?}
+            <a href="{sourceUrl}">{title}</a>
+          {.or}
+            <a href="{fullUrl}">{title}</a>
+          {.end}
+        </h1>
+        
+      </header>
 
     <!--MAIN CONTENT-->
+
+    <div class="post-body">
 
     {body}
 
@@ -69,7 +76,9 @@
     <!--COMMENTS-->
 
     {@|comments}
-
+    
+    </div>
+    </section>
   </article>
 
 {.end}
@@ -83,17 +92,17 @@
     <!--NEWER PAGE-->
 
     {.section prevItem}
-      <a href="{fullUrl}">Newer</a>
+      <a href="{fullUrl}">&rarr;</a>
     {.or}
-      <a class="disabled">Newer</a>
+      <a class="disabled">&rarr;</a>
     {.end}
     
     <!--OLDER PAGE-->
 
     {.section nextItem}
-      <a href="{fullUrl}">Older</a>
+      <a href="{fullUrl}">&larr;</a>
     {.or}
-      <a class="disabled">Older</a>
+      <a class="disabled">&larr;</a>
     {.end}
 
   </nav>
