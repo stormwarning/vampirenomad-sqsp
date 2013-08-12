@@ -13,8 +13,8 @@
 
 <!-- AUTHOR FILTER RESULTS ex: http://www.base-template.com/blog?author=4f046df4d09ae2cf23d1aaa2 -->
 
-{.section authorFilter}
-  <p>Filtering by Author: {@}</p>
+{.if authorFilter}
+  <p>Filtering by Author: {author.displayName}</p>
 {.end}
 
 <!--ITEM LOOP-->
@@ -37,7 +37,7 @@
 
     <h1 class="title">
       {.passthrough?}
-        <a href="{sourceUrl}">{title}</a>
+        <a href="{sourceUrl}" target="_blank">{title}</a>
       {.or}
         <a href="{fullUrl}">{title}</a>
       {.end}
@@ -81,7 +81,7 @@
     <!--POST META-->
     
     <p class="meta">
-      Published on <a href="{fullUrl}">{addedOn|date %B %d, %Y}</a> by <a href="?author={author.id}">{author.displayName}</a>.
+      Published on <a href="{fullUrl}"><time datetime="{addedOn|date %F}">{addedOn|date %B %d, %Y}</time></a> by <a href="?author={author.id}">{author.displayName}</a>.
       {.section sourceUrl}
         <a href="{@}" class="source" target="_blank">Source</a>.
       {.end}

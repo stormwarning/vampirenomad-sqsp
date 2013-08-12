@@ -1,63 +1,39 @@
 
-/* TEMPLATE CSS
-=================================================*/
-
-/* SQS GRID 
----------------------------------------------------
-
-  - @sqsGridNegateGutter: because the spacing between 
-    columns (the gutter) is split to either side of 
-    columns, the outer most columns of a grid will 
-    end up offset from the grid's parent container. 
-    To negate this outer padding, @sqsGridNegateGutter 
-    should be set to true.
-
-  - @sqsGridGutter: the spacing in between columns, 
-    set in pixel, em or percentages.
-
-  -----------------------------------------------*/
-
-@sqsGridNegateGutter: true;
-@sqsGridGutter: 30px;
-
-
 /* MOBILE FIRST
 -------------------------------------------------*/
 
 body {
   max-width: 48em;
   margin: 0 auto;
-  padding: 100px @sqsGridGutter/2;
+  padding: 100px 15px;
 }
 
 #header { }
 
 #main-navigation {
-  .folder-child {
-    display: none;
-  }
-
-  .folder-parent {
-    &:hover .folder-child {
-      display: inline-block;
-    }
-  }
-
   ul {  
     padding-left: 0;
     
     li {
       display: inline-block;
 
+      ul {
+        display: none;
+      }
+
       &:not(:last-child) {
         margin-right: .5em;
+      }
+
+      &:hover > ul {
+        display: inline-block;
       }
 
       &.active-link > a {
         color: salmon;
       }
 
-      &.active-folder .folder-parent > a {
+      &.active-folder > a {
         color: orange;
       }
     }
@@ -100,20 +76,28 @@ a {
 }
 
 
+/* TOUCH DEVICE - ADDED BY MODERNIZR
+-----------------------------------------------*/
+
+html.touch {
+  .squarespace-comments .comments-content .comment-list .comment .comment-header .controls .squarespace-comment-buttons .comment-control {
+    opacity: 1;
+  }
+}
+
+
 /* BREAK GRID AND STACK BLOCKS ON SMALL SCREENS 
 -----------------------------------------------*/
 
-@media screen and ( max-width: 48em ) {
-
+@media screen and (max-width: 48em) {
   .row .col {
     width: 100%;
     float: none;
   }
-
 }
 
 
 /* BEYOND MOBILE
 -----------------------------------------------*/
 
-@media screen and ( min-width: 48em ) { }
+@media screen and (min-width: 48em) { }

@@ -1,13 +1,10 @@
 
-Y.use( 'node', function( Y ) {
+Y.use('node', function(Y) {
 
-  Y.on( 'domready', function() {
-
+  Y.on('domready', function() {
     // Init ImageLoader  
     new Y.Squarespace.Loader({
-      img:Y.all( 'img[data-image]' )
+      img:Y.all('img[data-image]')
     });       
-    
   });
-
 });

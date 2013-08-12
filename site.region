@@ -25,7 +25,6 @@
       <!--SITE TITLE OR LOGO-->
 
       {.section website}
-      <pre>{@|json-pretty}</pre>
 
         <h1 data-content-field="site-title">
           <a href="/">
