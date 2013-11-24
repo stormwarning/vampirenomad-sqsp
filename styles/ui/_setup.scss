@@ -1,0 +1,76 @@
+/*------------------------------------*\
+    VARIABLE SETUP
+\*------------------------------------*/
+
+
+/**
+ * Colours
+ */
+$blue-dark:         #0e4e70;
+$purple-dark:       #512265;
+$purple-fade:       #444964;
+$grey-dark:         #333;
+$grey-light:        #e6e6e6;
+
+
+/**
+ * Sizes
+ */
+$medium:            45.31em;
+$large:             74.45em;
+$extralarge:        100em;
+
+
+$animation-length:  0.1s;
+$animation-timing:  ease-out;
+
+
+/**
+ * Mixins
+ */
+@mixin is-hidden {
+    display: none;
+}
+
+@include media-query(palm) {
+    .hidden--palm {
+        @include is-hidden;
+    }
+}
+
+@include media-query(lap-and-up) {
+    .hidden--lap-and-up {
+        @include is-hidden;
+    }
+}
+
+
+@mixin transition($property) {
+    -webkit-transition-property: $property;
+    -webkit-transition-duration: $animation-length;
+    -webkit-transition-timing-function: $animation-timing;
+       -moz-transition-property: $property;
+       -moz-transition-duration: $animation-length;
+       -moz-transition-timing-function: $animation-timing;
+        -ms-transition-property: $property;
+        -ms-transition-duration: $animation-length;
+        -ms-transition-timing-function: $animation-timing;
+         -o-transition-property: $property;
+         -o-transition-duration: $animation-length;
+         -o-transition-timing-function: $animation-timing;
+            transition-property: $property;
+            transition-duration: $animation-length;
+            transition-timing-function: $animation-timing;
+}
+
+
+/**
+ * Helpers
+ */
+%margin-bottom-half {
+    margin-bottom: $base-spacing-unit / 2;
+    margin-bottom: (($base-spacing-unit / $base-font-size) / 2)*1rem;
+}
+
+
+
