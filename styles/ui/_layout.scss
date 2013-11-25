@@ -50,7 +50,7 @@ strong {
 .navbar {
     padding: 4.167%;
     position: fixed;
-    width: 50%;
+    width: 75%;
     z-index: 9999;
     
     @include media-query(lap-and-up) {
