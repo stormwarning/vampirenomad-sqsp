@@ -18,26 +18,30 @@
     <link rel="stylesheet" 
           href="http://fonts.googleapis.com/css?family=Lato:300">
     <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/vendor/modernizr-2.7.1.min.js"></script>
 </head>
 <body>
+
+
+    <header class="site-header">
+        <label class=" " for="mobile-navigation-toggle">
+            <img class="logo" src="assets/vn-icon.png" alt="Vampire Nomad">
+        </label>
+<!--
+        <a class="hidden--palm" href="/">
+            <img class="logo" src="assets/vn-icon.png" alt="Vampire Nomad">
+        </a>
+-->
+        
+        <a class="skip-nav" href="#main">Skip navigation</a>
+    </header>
+
+
 <div class="grid">
 <div class="grid__item  one-half  lap-and-up-three-twelfths">
 
     <div class="navbar">
 
-        <input class="site-nav__toggle" id="mobile-navigation-toggle" type="checkbox" name="checkbox">
-    
-        <header class="site-header">
-            <label class="hidden--lap-and-up" for="mobile-navigation-toggle">
-                <img class="logo" src="assets/vn-icon.png" alt="Vampire Nomad">
-            </label>
-            <a class="hidden--palm" href="/">
-                <img class="logo" src="assets/vn-icon.png" alt="Vampire Nomad">
-            </a>
-            
-            <a class="skip-nav" href="#main">Skip navigation</a>
-        </header>
-        
         <nav class="site-nav">
             <ul class="nav  nav--stacked  nav--block">
                 <li class="nav-item--current">
@@ -64,7 +68,9 @@
     </div>
     
 </div><!--
---><div class="grid__item  one-whole  lap-and-up-nine-twelfths">
+--><div class="grid__item  one-whole">
+
+    <input class="site-nav__toggle" id="mobile-navigation-toggle" type="checkbox" name="checkbox">
     
     <div class="content" id="main">
     
@@ -201,10 +207,11 @@
 
 
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="scripts/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="scripts/vendor/jquery-1.10.2.min.js"><\/script>')</script>
     
     <script src="scripts/site.js"></script>
+    <script src="scripts/pushy.min.js"></script>
 
 
 </body>
