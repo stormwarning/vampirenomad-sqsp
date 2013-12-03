@@ -18,15 +18,16 @@
     <link rel="stylesheet" 
           href="http://fonts.googleapis.com/css?family=Lato:300">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/pushy.css">
     <script src="scripts/vendor/modernizr-2.7.1.min.js"></script>
 </head>
 <body>
 
 
     <header class="site-header">
-        <label class=" " for="mobile-navigation-toggle">
+        <div class="pushy-trigger">
             <img class="logo" src="assets/vn-icon.png" alt="Vampire Nomad">
-        </label>
+        </div>
 <!--
         <a class="hidden--palm" href="/">
             <img class="logo" src="assets/vn-icon.png" alt="Vampire Nomad">
@@ -37,13 +38,10 @@
     </header>
 
 
-<div class="grid">
-<div class="grid__item  one-half  lap-and-up-three-twelfths">
-
-    <div class="navbar">
+    <aside class="navbar  pushy">
 
         <nav class="site-nav">
-            <ul class="nav  nav--stacked  nav--block">
+            <ul class="nav  nav--stacked">
                 <li class="nav-item--current">
                     <a href="#">Home</a>
                 </li>
@@ -65,14 +63,24 @@
             </ul>
         </nav>
         
-    </div>
+        <small class="copyright">All content copyright is owned by its respective authors. All rights reserved.</small>
+        
+    </aside>
     
-</div><!--
---><div class="grid__item  one-whole">
-
-    <input class="site-nav__toggle" id="mobile-navigation-toggle" type="checkbox" name="checkbox">
+    <div class="pushy-overlay"></div>
     
-    <div class="content" id="main">
+    <div class="layout  content" id="main">
+    
+        <section class="masthead">
+        <div class="grid">
+        <div class="grid__item  eight-twelfths  push--lap-and-up-two-twelfths">
+        
+            <h1 class="site-title">Vampire Nomad</h1>
+            <p class="site-tagline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at arcu mauris.</p>
+        
+        </div>
+        </div>
+        </section>
     
         <article class="post--featured">
         
@@ -81,21 +89,37 @@
                 <div class="post-header__overlay"></div>
             
                 <div class="post-header__inner">
-                    <p class="post__category"><a href="#">Category</a></p>
-            
-                    <h1 class="post__title">Blog Post Title</h1>
+                    <div class="grid">
+                    <div class="grid__item  eight-twelfths  push--lap-and-up-two-twelfths">
                     
-                    <p class="post__author">by <a href="#">Author</a></p>
+                        <p class="post__category"><a href="#">Category</a></p>
+                
+                        <h1 class="post__title">Blog Post Title</h1>
+                        
+                        <p class="post__author">by <a href="#">Author</a></p>
+                        
+                                    <section class="post__content">
+            
+                <p>In raw denim gentrify squid. Salvia drinking vinegar Helvetica, farm-to-table four loko artisan butcher cupidatat reprehenderit Marfa Bushwick hashtag duis keffiyeh.</p>
+                
+                <p><a href="#">Keep reading &rarr;</a></p>
+                
+            </section>
+
+                        
+                    </div>
+                    </div>
                 </div>
                 
             </header>
             
-            <div class="grid  grid--centered">
-            <div class="grid__item  eleven-twelfths">
+<!--
+            <div class="grid">
+            <div class="grid__item  eight-twelfths  push--lap-and-up-two-twelfths">
             
             <section class="post__content">
             
-                <p>In raw denim gentrify squid. Salvia drinking vinegar Helvetica, farm-to-table four loko artisan butcher cupidatat reprehenderit Marfa Bushwick hashtag duis keffiyeh. DIY <a href="#">Wes Anderson</a> pop-up, narwhal Banksy roof party qui actually VHS Portland Brooklyn Intelligentsia. Godard kale chips Tumblr, sed gastropub fanny pack elit irony plaid wolf vegan occaecat cupidatat sartorial. Four loko +1 vegan reprehenderit blog. Scenester meh id, craft beer commodo +1 Portland gluten-free. Synth paleo you probably haven't heard of them, nihil actually post-ironic sed street art enim forage brunch ugh Etsy.</p>
+                <p>In raw denim gentrify squid. Salvia drinking vinegar Helvetica, farm-to-table four loko artisan butcher cupidatat reprehenderit Marfa Bushwick hashtag duis keffiyeh. DIY <a href="#">Wes Anderson</a> pop-up, narwhal Banksy roof party qui actually VHS Portland Brooklyn Intelligentsia.</p>
                 
                 <p><a href="#">Keep reading &rarr;</a></p>
                 
@@ -103,12 +127,14 @@
             
             </div>
             </div>
+-->
             
         </article>
         
         <section class="category-list">
-            <div class="grid  grid--centered">
-            <div class="grid__item  eleven-twelfths">
+            <div class="category-list__inner">
+            <div class="grid">
+            <div class="grid__item  one-whole  lap-and-up-eight-twelfths  push--lap-and-up-two-twelfths">
         
                 <h2>Categories</h2>
                 
@@ -125,93 +151,79 @@
                 
             </div>
             </div>
+            </div>
         </section>
         
+        <div class="grid">
+        <div class="grid__item  one-whole  lap-and-up-five-twelfths  push--lap-and-up-one-twelfth">
+        
         <article class="post--recent">
-            <div class="grid  grid--centered">
-            <div class="grid__item  eleven-twelfths">
-            
-                <div class="grid">
-                <div class="grid__item  one-whole  lap-and-up-four-twelfths">
+            <div class="grid">
+            <div class="grid__item  one-whole  lap-and-up-four-twelfths">
 
-                    <header>
-                    
-                        <h2 class="post__title">Post title</h2>
-                        
-                        <p class="post__author">by <a href="#">Author</a></p>
-                        
-                    </header>
-                    
-                </div><!--
-                --><div class="grid__item  one-whole  lap-and-up-eight-twelfths">
+                <header>
                 
-	                <section>
-	                
-	                    <p>Army had half a day. I'm afraid I just blue myself. I hear the jury's still out on science. Bad news. Andy Griffith turned us down. He didn't like his trailer.</p>
-	                    
-	                </section>
-
-				</div>
-				</div>
+                    <h2 class="post__title">Post title</h2>
+                    
+                    <p class="post__author">by <a href="#">Author</a></p>
+                    
+                </header>
+                
+            </div><!--
+            --><div class="grid__item  one-whole  lap-and-up-eight-twelfths">
             
+                <section>
+                
+                    <p>Army had half a day. I&rsquo;m afraid I just blue myself. I hear the jury&rsquo;s still out on science. Bad news. Andy Griffith turned us down. He didn&rsquo;t like his trailer.</p>
+                    
+                </section>
+
             </div>
             </div>
         </article>
         
         <article class="post--recent">
-            <div class="grid  grid--centered">
-            <div class="grid__item  eleven-twelfths">
-            
-                <div class="grid">
-                <div class="grid__item  one-whole  lap-and-up-four-twelfths">
-
-                    <header>
-                    
-                        <h2 class="post__title">Post title</h2>
-                        
-                        <p class="post__author">by <a href="#">Author</a></p>
-                        
-                    </header>
-                    
-                </div><!--
-                --><div class="grid__item  one-whole  lap-and-up-eight-twelfths">
-            
-		            <section>
-            
-		                <p>It's called 'taking advantage.' It's what gets you ahead in life. But I bought a yearbook ad from you, doesn't that mean anything anymore? Not tricks, Michael, illusions.</p>
+            <div class="grid">
+            <div class="grid__item  one-whole  lap-and-up-four-twelfths">
+    
+                <header>
                 
-		            </section>
-	
-				</div>
-				</div>
-
-			</div>
-			</div>        
+                    <h2 class="post__title">Post title</h2>
+                    
+                    <p class="post__author">by <a href="#">Author</a></p>
+                    
+                </header>
+                
+            </div><!--
+            --><div class="grid__item  one-whole  lap-and-up-eight-twelfths">
+        
+                <section>
+        
+                    <p>It&rsquo;s called &lsquo;taking advantage.&rsquo; It&rsquo;s what gets you ahead in life. But I bought a yearbook ad from you, doesn&rsquo;t that mean anything anymore? Not tricks, Michael, illusions.</p>
+            
+                </section>
+    
+            </div>
+            </div>
         </article>
+        
+        </div>
+        </div>
         
         <section class="pagination">
         
         </section>
         
     </div>
-    
-    <footer class="site-footer">
-    
-        <small class="copyright">All content copyright is owned by its respective authors. All rights reserved.</small>
-        
-    </footer>
-    
-</div>
-</div>
 
 
 
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="scripts/vendor/jquery-1.10.2.min.js"><\/script>')</script>
     
-    <script src="scripts/site.js"></script>
-    <script src="scripts/pushy.min.js"></script>
+<!--     <script src="scripts/site.js"></script> -->
+    <script src="scripts/pushy.js"></script>
 
 
 </body>
