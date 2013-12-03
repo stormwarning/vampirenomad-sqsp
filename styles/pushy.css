@@ -1,0 +1,111 @@
+/**! Pushy - v0.9.1 - 2013-9-16
+ * Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
+ * https://github.com/christophery/pushy/
+ * by Christopher Yee 
+ */
+
+
+/**
+ * Global optimisations
+ */
+html, 
+body {
+    height: 100%;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+
+/**
+ * Menu appearance 
+ * 
+ * Only applies the styles necessary for off-canvas effect, should play nicely with 
+ * other site layout style.
+ * 
+ * [1]: Menu width should match the transform distance
+ */
+.pushy {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 25%; /* [1] */
+    height: 100%;
+    min-height: 100%;
+    overflow: auto;
+    
+    /* hide the menu by default */
+/*
+    -webkit-transform: translate3d(-100%,0,0);
+       -moz-transform: translate3d(-100%,0,0);
+        -ms-transform: translate3d(-100%,0,0);
+         -o-transform: translate3d(-100%,0,0);
+            transform: translate3d(-100%,0,0);
+*/
+    
+    /* optional inset shadow */
+    -webkit-box-shadow: inset -10px 0 6px -9px rgba(0, 0, 0, .7);
+       -moz-box-shadow: inset -10px 0 6px -9px rgba(0, 0, 0, .7);
+            box-shadow: inset -10px 0 6px -9px rgba(0, 0, 0, .7);
+    
+    /* enables momentum scrolling in iOS overflow elements */
+    -webkit-overflow-scrolling: touch; 
+}
+
+
+/**
+ * Menu movement 
+ */
+.pushy--left {
+}
+
+.pushy--open {
+    -webkit-transform: translate3d(0,0,0);
+       -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+         -o-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+}
+
+.is-pushed {
+    -webkit-transform: translate3d(25%,0,0);
+       -moz-transform: translate3d(25%,0,0);
+        -ms-transform: translate3d(25%,0,0);
+         -o-transform: translate3d(25%,0,0);
+            transform: translate3d(25%,0,0);
+}
+
+
+/**
+ * Menu transition 
+ */
+/* .pushy,  */
+.layout,
+.js-push {
+    -webkit-transition: -webkit-transform .2s cubic-bezier(.16, .68, .43, .99);
+       -moz-transition:    -moz-transform .2s cubic-bezier(.16, .68, .43, .99);
+         -o-transition:      -o-transform .2s cubic-bezier(.16, .68, .43, .99);
+            transition:         transform .2s cubic-bezier(.16, .68, .43, .99);
+    
+    /* improves performance issues on mobile*/
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+}
+
+
+/**
+ * Site overlay
+ */
+.pushy-overlay {
+    display: none;
+}
+
+.pushy--is-active .pushy-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 25%;
+    z-index: 9999;
+    display: block;
+}
+
