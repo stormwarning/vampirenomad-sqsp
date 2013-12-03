@@ -9,6 +9,7 @@ body {
     color: $grey-light;
     font-family: Merriweather, serif;
     font-weight: 300;
+    -webkit-font-smoothing: subpixel-antialiased;
 }
 
 a {
@@ -35,6 +36,10 @@ strong {
  * Main navigation styles
  */
 .site-header {
+    position: fixed;
+    z-index: 9999;
+    padding: 4.167%;
+    padding-bottom: 0;
     
     @include media-query(lap-and-up) {
         text-align: center;
@@ -64,49 +69,24 @@ strong {
     width: 44px;
     
     @include media-query(lap-and-up) {
-        width: auto;
+        width: 88px;
     }
 }
 
 
-.site-nav .nav {
-    display: none;
+.site-nav {
+    margin-top: 44px;
+    padding-top: $base-spacing-unit;
     
     @include media-query(lap-and-up) {
-        display: block;
+        margin-top: 88px;
     }
-}
-
-
-.site-nav__toggle {
-    
-    @include is-hidden;
-}
-
-.site-nav__toggle:checked ~ .content {
-    -webkit-transform: translate3d(25%, 0, 0);
-       -moz-transform: translate3d(25%, 0, 0);
-        -ms-transform: translate3d(25%, 0, 0);
-         -o-transform: translate3d(25%, 0, 0);
-            transform: translate3d(25%, 0, 0);
-}
-/*
-.site-nav__toggle:checked ~ .site-header ~ .site-nav {
-    background-color: rgba(12,12,12,0.95);
-    
-    @include media-query(lap-and-up) {
-        background-color: transparent;
-    }
-}
-*/
-
-
-.nav {
     
     li {
+        margin-bottom: $base-spacing-unit;
         
         &:last-child {
-            border-bottom: 0;
+            margin-bottom: 0;
         }
         
         a {
@@ -147,11 +127,12 @@ strong {
  * Content wrapper
  */
 .content {
-    @extend .landmark;
-    
     background-color: $purple-fade;
     margin-top: -$base-spacing-unit;
+    position: relative;
     z-index: 100;
+    padding-bottom: ($base-spacing-unit)*2;
+    padding-bottom: (($base-spacing-unit / $base-font-size)*2)*1rem;
     
     @include media-query(lap-and-up) {
         margin-top: 0;
@@ -180,7 +161,7 @@ strong {
 }
 
     .post-header {
-        @extend %sass-margin-bottom;
+/*         @extend %sass-margin-bottom; */
         
         background-attachment: scroll;
         background-position: top center;
@@ -217,7 +198,8 @@ strong {
         .post-header__inner {
             position: absolute;
             bottom: 4.167%;
-            left: 4.167%;
+/*             left: 4.167%; */
+            width: 100%;
             z-index: 110;
         }
         
@@ -283,19 +265,47 @@ strong {
 
 
 /**
+ * Masthead section
+ */
+.masthead {
+    padding: 4.167% 0;
+    background-image: url('../assets/tangled.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.site-title {
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+.site-tagline {
+    margin-bottom: 0;
+}
+
+
+
+/**
  * Categories list section
  */
 .category-list {
     @extend %sass-margin-bottom;
     
-    background-color: rgba(0,0,0,0.4);
-    padding-top: $base-spacing-unit;
-    padding-top: ($base-spacing-unit / $base-font-size)*1rem;
+    background-image: url('../assets/tangled.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     
     ul {
         margin-left: 0;
     }
 }
+
+    .category-list__inner {
+        padding-top: $base-spacing-unit;
+        padding-top: ($base-spacing-unit / $base-font-size)*1rem;
+        background-color: rgba(52,17,34,0.4);
+    }
 
 
 
@@ -308,5 +318,8 @@ strong {
     width: 100%;
 }
 
+.copyright {
+    font-family: Lato, sans-serif;
+}
 
 
