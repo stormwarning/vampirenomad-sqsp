@@ -62,6 +62,20 @@ strong {
         overflow: hidden;
         width: 25%;
     }
+    
+    a {
+        color: #666;
+        display: block;
+        font-family: Lato, sans-serif;
+        letter-spacing: 1px;
+                
+        @include font-size($h5-size);
+        @include transition(color);
+        
+        &:hover {
+            color: #fff;
+        }
+    }
 }
 
 
@@ -83,25 +97,15 @@ strong {
     }
     
     li {
-        margin-bottom: $base-spacing-unit;
+        margin-bottom: ($base-spacing-unit) / 2;
+        margin-bottom: (($base-spacing-unit / $base-font-size) / 2)*1rem;
         
         &:last-child {
             margin-bottom: 0;
         }
         
         a {
-            color: #666;
-            display: block;
-            font-family: Lato, sans-serif;
-            letter-spacing: 1px;
             text-transform: uppercase;
-            
-            @include font-size($h4-size);
-            @include transition(color);
-            
-            &:hover {
-                color: #fff;
-            }
         }
     }
     
@@ -111,10 +115,21 @@ strong {
             color: #fff;
         }
     }
-
 }
 
+.secondary-nav {
     
+    li {
+        margin-bottom: ($base-spacing-unit) / 2;
+        margin-bottom: (($base-spacing-unit / $base-font-size) / 2)*1rem;
+        
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
 .skip-nav {
     position: absolute;
     left: -999em;
@@ -234,6 +249,10 @@ strong {
             .post--featured .post__title {
                 @include font-size($kilo-size);
             }
+            
+            .post__intro {
+                font-size: $h5-size;
+            }
 
 .post--recent {
     @extend .landmark;
@@ -272,6 +291,7 @@ strong {
     background-image: url('../assets/tangled.png');
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: rgba(50,2,39,0.8);
 }
 
 .site-title {
@@ -320,6 +340,7 @@ strong {
 
 .copyright {
     font-family: Lato, sans-serif;
+    color: rgba(230,230,230,0.6);
 }
 
 
