@@ -18,184 +18,181 @@
     <link rel="stylesheet" 
           href="http://fonts.googleapis.com/css?family=Lato:300">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/pushy.css">
+    <script src="scripts/vendor/modernizr-2.7.1.min.js"></script>
 </head>
 <body>
-<div class="grid">
-<div class="grid__item  one-half  lap-and-up-three-twelfths">
 
-    <div class="navbar">
 
-        <input class="site-nav__toggle" id="mobile-navigation-toggle" type="checkbox" name="checkbox">
-    
-        <header class="site-header">
-            <label class="hidden--lap-and-up" for="mobile-navigation-toggle">
-                <img class="logo" src="assets/vn-icon.png" alt="Vampire Nomad">
-            </label>
-            <a class="hidden--palm" href="/">
-                <img class="logo" src="assets/vn-icon.png" alt="Vampire Nomad">
-            </a>
-            
-            <a class="skip-nav" href="#main">Skip navigation</a>
-        </header>
+    <header class="site-header">
+        <div class="pushy-trigger">
+            <img class="logo" src="assets/vn-icon.png" alt="Vampire Nomad">
+        </div>
+<!--
+        <a class="hidden--palm" href="/">
+            <img class="logo" src="assets/vn-icon.png" alt="Vampire Nomad">
+        </a>
+-->
         
+        <a class="skip-nav" href="#main">Skip navigation</a>
+    </header>
+
+
+    <aside class="navbar  pushy">
+
         <nav class="site-nav">
-            <ul class="nav  nav--stacked  nav--block">
-                <li>
-                    <a href="#">About</a>
+            <ul class="nav  nav--stacked">
+                <li class="nav-item--current">
+                    <a href="#">Home</a>
                 </li>
                 <li>
-                    <a href="#">Authors</a>
+                    <a href="#">Writing</a>
                 </li>
                 <li>
-                    <a href="#">Projects</a>
+                    <a href="#">Vamp Artistry</a>
+                </li>
+                <li>
+                    <a href="#">The Crypt</a>
                 </li>
             </ul>
         </nav>
         
-    </div>
-    
-</div><!--
---><div class="grid__item  one-whole  lap-and-up-nine-twelfths">
-    
-    <div class="content" id="main">
-    
-        <article class="post--featured">
+        <nav class="secondary-nav">
+            <ul class="nav  nav--stacked">
+                <li>
+                    <a href="#">About Vampire Nomad</a>
+                </li>
+                <li>
+                    <a href="#">Contributors</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
         
-            <header class="post-header" style="background-image:url(http://placekitten.com/g/1024/600)">
+        <small class="copyright">All content copyright is owned by its respective authors. All rights reserved.</small>
+        
+    </aside>
+    
+    <div class="pushy-overlay"></div>
+    
+    <div class="layout  content" id="main">
+    
+        <section class="masthead">
+            <div class="grid">
+            <div class="grid__item  eight-twelfths  push--lap-and-up-two-twelfths">
+        
+                <h1 class="site-title">Vampire Nomad</h1>
+                <p class="site-tagline">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at arcu mauris.</p>
+        
+            </div>
+            </div>
+        </section>
+        
+    
+        <article class="post  post--featured">
+        
+            <header class="post-header">
             
                 <div class="post-header__overlay"></div>
             
                 <div class="post-header__inner">
-                    <p class="post__category"><a href="#">Category</a></p>
-            
-                    <h1 class="post__title">Blog Post Title</h1>
-                    
-                    <p class="post__author">by <a href="#">Author</a></p>
+                    <div class="grid">
+                    <div class="grid__item  six-twelfths  push--lap-and-up-two-twelfths">
+                
+                        <h1 class="post__title">Blog Post Title</h1>
+                        
+                        <p class="post__author">by <a href="#">Author</a></p>
+                        
+                        <p class="post__intro">In raw denim gentrify squid. Salvia drinking vinegar Helvetica, farm-to-table four loko artisan butcher cupidatat reprehenderit Marfa Bushwick hashtag duis keffiyeh.</p>
+                        
+                    </div>
+                    </div>
                 </div>
                 
             </header>
             
-            <div class="grid  grid--centered">
-            <div class="grid__item  eleven-twelfths">
-            
-            <section class="post__content">
-            
-                <p>In raw denim gentrify squid. Salvia drinking vinegar Helvetica, farm-to-table four loko artisan butcher cupidatat reprehenderit Marfa Bushwick hashtag duis keffiyeh. DIY Wes Anderson pop-up, narwhal Banksy roof party qui actually VHS Portland Brooklyn Intelligentsia. Godard kale chips Tumblr, sed gastropub fanny pack elit irony plaid wolf vegan occaecat cupidatat sartorial. Four loko +1 vegan reprehenderit blog. Scenester meh id, craft beer commodo +1 Portland gluten-free. Synth paleo you probably haven't heard of them, nihil actually post-ironic sed street art enim forage brunch ugh Etsy.</p>
-                
-                <p><a href="#">Keep reading &rarr;</a></p>
-                
-            </section>
-            
-            </div>
-            </div>
-            
         </article>
         
-        <section class="category-list">
-            <div class="grid  grid--centered">
-            <div class="grid__item  eleven-twelfths">
         
-                <h2>Categories</h2>
+        <article class="post  post--gallery">
+            <div class="grid">
+            <div class="grid__item  one-whole">
                 
-                <ul class="text-cols--3">
-                    <li>Category</li>
-                    <li>Category</li>
-                    <li>Category</li>
-                    <li>Category</li>
-                    <li>Category</li>
-                    <li>Category</li>
-                    <li>Category</li>
-                    <li>Category</li>
-                </ul>
+                <h1 class="post__title">Greymalkin</h1>
+                
+                <img class="gallery__cover" src="http://placekitten.com/g/1024/600">
+                    
+            </div>
+            </div>
+        </article>
+        
+        
+        <section class="recent-posts">
+            <div class="grid">
+            <div class="grid__item  one-half">
+        
+                <article class="gallery--recent">
+                        
+                    <h3>Other gallery</h3>
+                        
+                </article>
+                
+                <article class="gallery--recent">
+                        
+                    <h3>Other gallery</h3>
+                        
+                </article>
+                
+                <article class="gallery--recent">
+                        
+                    <h3>Other gallery</h3>
+                        
+                </article>
+                
+            </div><!--
+            --><div>
+                
+                <article class="post--recent">
+                        
+                    <h3>Blog post</h3>
+                        
+                </article>
+                
+                <article class="post--recent">
+                        
+                    <h3>Some article title</h3>
+                        
+                </article>
+                
+                <article class="post--recent">
+                        
+                    <h3>Blog post</h3>
+                        
+                </article>
                 
             </div>
             </div>
         </section>
         
-        <article class="post--recent">
-            <div class="grid  grid--centered">
-            <div class="grid__item  eleven-twelfths">
+        
+        <footer class="site-footer">
             
-                <div class="grid">
-                <div class="grid__item  one-whole  lap-and-up-four-twelfths">
-
-                    <header>
-                    
-                        <h2 class="post__title">Post title</h2>
-                        
-                        <p class="post__author">by <a href="#">Author</a></p>
-                        
-                    </header>
-                    
-                </div><!--
-                --><div class="grid__item  one-whole  lap-and-up-eight-twelfths">
+            <p>Copyright notice.</p>
                 
-	                <section>
-	                
-	                    <p>Army had half a day. I'm afraid I just blue myself. I hear the jury's still out on science. Bad news. Andy Griffith turned us down. He didn't like his trailer.</p>
-	                    
-	                </section>
-
-				</div>
-				</div>
-            
-            </div>
-            </div>
-        </article>
-        
-        <article class="post--recent">
-            <div class="grid  grid--centered">
-            <div class="grid__item  eleven-twelfths">
-            
-                <div class="grid">
-                <div class="grid__item  one-whole  lap-and-up-four-twelfths">
-
-                    <header>
-                    
-                        <h2 class="post__title">Post title</h2>
-                        
-                        <p class="post__author">by <a href="#">Author</a></p>
-                        
-                    </header>
-                    
-                </div><!--
-                --><div class="grid__item  one-whole  lap-and-up-eight-twelfths">
-            
-		            <section>
-            
-		                <p>It's called 'taking advantage.' It's what gets you ahead in life. But I bought a yearbook ad from you, doesn't that mean anything anymore? Not tricks, Michael, illusions.</p>
-                
-		            </section>
-	
-				</div>
-				</div>
-
-			</div>
-			</div>        
-        </article>
-        
-        <section class="pagination">
-        
-        </section>
+        </footer>
         
     </div>
-    
-    <footer class="site-footer">
-    
-        <small class="copyright">All content copyright is owned by its respective authors. All rights reserved.</small>
-        
-    </footer>
-    
-</div>
-</div>
 
 
 
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="scripts/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="scripts/vendor/jquery-1.10.2.min.js"><\/script>')</script>
     
-    <script src="scripts/site.js"></script>
+<!--     <script src="scripts/site.js"></script> -->
+    <script src="scripts/pushy.js"></script>
 
 
 </body>
