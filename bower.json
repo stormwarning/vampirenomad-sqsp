@@ -1,0 +1,8 @@
+{
+  "name": "vampirenomad-sqsp",
+  "version": "0.3.0",
+  "private": true,
+  "dependencies": {
+    "normalize-scss": "~3.0.1"
+  }
+}

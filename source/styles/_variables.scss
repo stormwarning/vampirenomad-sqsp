@@ -1,0 +1,78 @@
+/*------------------------------------*\
+    VARIABLES.SCSS
+\*------------------------------------*/
+/**
+ * Basic custom style variables.
+ */
+$layout-gutter:   24px;  // demo, should be based on vertical rhythm
+$global-border-box: true;
+$site-width:      960px;
+$base-radius:     5px;
+$sprite-size:     600px 400px;
+
+// Transition settings
+$timing:          cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+
+/**
+ * Colours
+ */
+$black:           #111;
+$grey-dark:       #666;
+$grey:            #bcc2c9;
+$grey-light:      #e9ebed;
+$white:           #fff;
+
+$blue-dark:       #011836;
+$red:             #bf1e2e;
+$tan:             #cb821e;
+$tan-ultradark:   #2f1f12;
+$brown:           #452d1a;
+$rose:            #d16950;
+
+$color-link:      $white;
+$color-shadow:    $black;
+$color-selection: $brown;
+
+$color-overhaul:  #71838e;
+$color-facebook:  #3b5998;
+$color-twitter:   #00aced;
+$color-google:    #434647;
+
+
+/**
+ * Typography
+ */
+// Font stacks
+$body:              Merriweather, serif;
+$heading:           Raleway, sans-serif;
+
+$base-font-size:    16px!default;
+$base-line-height:  24px!default;
+
+$giga-size:         96px!default;
+$mega-size:         72px!default;
+$kilo-size:         48px!default;
+
+$h1-size:           36px!default; // .alpha
+$h2-size:           30px!default; // .beta
+$h3-size:           24px!default; // .gamma
+$h4-size:           20px!default; // .delta
+$h5-size:           16px!default; // .epsilon
+$h6-size:           14px!default; // .zeta
+
+$milli-size:        12px!default;
+$micro-size:        10px!default;
+
+
+/**
+ * Grid settings
+ */
+$grid-small: (
+    gutter-position: inside,
+    container: auto,
+    container-position: center,
+    columns: 4,
+    global-box-sizing: border-box
+
+);

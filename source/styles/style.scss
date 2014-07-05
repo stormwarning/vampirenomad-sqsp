@@ -1,0 +1,40 @@
+/**
+ *
+ */
+
+/**
+ * Generic utility styles etc.
+ */
+@import "susy";
+@import "mixins";
+@import "variables";
+@import "../vendor/normalize-scss/_normalize.scss";
+
+
+/**
+ * Base styles; unclassed HTML elements etc.
+ */
+@import "partials/base.shared";
+@import "partials/base.global";
+@import "partials/base.typography";
+@import "partials/base.layout";
+
+
+/**
+ * Objects, abstractions, and constructs
+ */
+@import "partials/object.nav";
+
+
+/**
+ * Page-specific styles
+ */
+
+
+
+/**
+ * Style trumps; helper and brand classes
+ */
+// @import "partials/trump.modernizr";
+// @import "partials/trump.print";
+// @import "partials/trump.debug";

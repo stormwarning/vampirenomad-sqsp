@@ -1,0 +1,52 @@
+/*------------------------------------*\
+	#SHARED
+\*------------------------------------*/
+/**
+ * Layout system
+ *
+ * @link http://csswizardry.com/csswizardry-grids/
+ */
+%layout {
+	padding: 0;
+	margin:	 0;
+	margin-left: -$layout-gutter;
+	list-style: none;
+}
+
+	/**
+	 * 1. Cause columns to stack side-by-side.
+	 * 2. Space columns apart.
+	 * 3. Align columns to the tops of each other.
+	 * 4. Full-width unless told to behave otherwise.
+	 * 5. Required to combine fluid widths and fixed gutters.
+	 */
+	%layout__item {
+		display: inline-block; /* [1] */
+		padding-left: $layout-gutter; /* [2] */
+		vertical-align: top; /* [3] */
+		width: 100%; /* [4] */
+
+		@if $global-border-box == false {
+			-webkit-box-sizing: border-box; /* [5] */
+			   -moz-box-sizing: border-box; /* [5] */
+					box-sizing: border-box; /* [5] */
+		}
+
+	}
+
+
+/**
+ * Micro clearfix.
+
+ * Extend the clearfix class with Sass to avoid the `.cf` class appearing over
+ * and over in your markup.
+ *
+ * @link css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+ */
+.cf {
+	&:after {
+		display: table;
+		content: '';
+		clear: both;
+	}
+}

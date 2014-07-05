@@ -1,0 +1,83 @@
+/*------------------------------------*\
+	#TYPOGRAPHY
+\*------------------------------------*/
+/**
+ * Header setup
+ *
+ * 1. this fixes huge spaces when a heading wraps onto two lines
+ * 2. voodoo to enable ligatures and kerning
+ */
+%hN {
+	margin-top: 0;
+	line-height: 1; /* [1] */
+	text-rendering: optimizeLegibility; /* [2] */
+
+	> a {
+		text-decoration: none;
+	}
+
+	> b {
+		font-weight: normal;
+	}
+}
+
+
+/**
+ * Some high-level defaults.
+ */
+html,
+input {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+body {
+	font-family: $body;
+	color: $black;
+
+	@include font-size(16px);
+}
+
+
+::-moz-selection {
+	color: $white;
+	background-color: rgba($color-selection, 0.6);
+	text-shadow: none;
+}
+::selection {
+	color: $white;
+	background-color: rgba($color-selection, 0.6);
+	text-shadow: none;
+}
+
+
+/**
+ * Header styles
+ */
+h1,.alpha{
+    @include font-size($h1-size);
+}
+h2,.beta{
+    @include font-size($h2-size);
+}
+h3,.gamma{
+    @include font-size($h3-size);
+}
+h4,.delta{
+    @include font-size($h4-size);
+}
+h5,.epsilon{
+    @include font-size($h5-size);
+}
+h6,.zeta{
+    @include font-size($h6-size);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	@extend %hN;
+
+	font-family: $heading;
+	font-weight: 300;
+	line-height: 1;
+}

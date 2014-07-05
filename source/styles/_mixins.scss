@@ -1,0 +1,47 @@
+/**
+ * Create a fully formed type style (sizing and vertical rhythm) by passing in a
+ * single value, e.g.:
+ *
+   `@include font-size(10px);`
+ *
+ * Thanks to @redclov3r for the `line-height` Sass:
+ * twitter.com/redclov3r/status/250301539321798657
+ */
+@mixin font-size($font-size, $line-height:true) {
+	font-size: $font-size;
+	font-size: ($font-size / $base-font-size) * 1rem;
+
+	@if $line-height == true{
+		line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+	}
+}
+
+
+/*
+ * Mixin for easy media queries
+ *
+	@include bp(tablet) { SCSS here };
+ *
+ */
+@mixin bp($point) {
+	@if $point == xlarge {
+		@media (min-width : 72em) { @content; }
+	}
+	@else if $point == large {
+		@media (min-width : 60em) { @content; }
+	}
+	@else if $point == medium {
+		@media (min-width : 48em) { @content; }
+	}
+	@else if $point == small {
+		@media (min-width : 30em) { @content; }
+	}
+	@else if $point == retina {
+		@media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+		       only screen and (-o-min-device-pixel-ratio: 13/10),
+		       only screen and (min-resolution: 120ppi) { @content; }
+	}
+	@else {
+		@media (max-width : $point) { @content; }
+	}
+}

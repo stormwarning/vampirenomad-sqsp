@@ -1,0 +1,104 @@
+/*------------------------------------*\
+	#LAYOUT
+\*------------------------------------*/
+.site-header {
+	color: $white;
+	background-color: $blue-dark;
+}
+
+	.logo {
+		width: 96px;
+	}
+
+	.site-title {
+
+	}
+
+	.site-tagline {
+
+	}
+
+	.skip-nav {
+		display: none;
+	}
+
+
+.navbar {
+	display: none; //debug
+}
+
+
+.content {
+
+}
+
+
+.recent-about {
+
+}
+
+
+.post {
+	padding: $layout-gutter 0;
+
+	@include layout($grid-small);
+}
+
+	.post-header {
+
+	}
+
+		.post-title {
+
+		}
+
+	.post-content {
+
+	}
+
+	.post-footer {
+		@extend .cf;
+
+		border-top: 1px solid $grey-light;
+	}
+
+		.read-more {
+			float: right;
+		}
+
+		.post-date {
+
+		}
+
+		.post-tags {
+
+		}
+
+		.post-author {
+
+		}
+
+.post--featured {
+
+}
+
+.post--recent {
+	background-color: $grey-light;
+
+	.post-footer {
+		border-color: $grey;
+	}
+}
+
+.post--about {
+	background-color: $grey;
+}
+
+
+.site-footer {
+
+}
+
+	.copyright {
+
+	}
